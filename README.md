@@ -3,7 +3,7 @@
 Простой скрипт, который:
 
 1. читает отзывы из `input.csv`
-2. отправляет каждый отзыв в LLM через API
+2. отправляет каждый отзыв в LLM `Groq` через API
 3. получает ответ в формате JSON
 4. сохраняет результат в `output.json`
 
@@ -11,8 +11,6 @@
 
 - `sentiment`: `positive`, `negative` или `neutral`
 - `topic`: тема отзыва
-
-По умолчанию скрипт настроен на `Groq`, потому что у него есть бесплатный план и OpenAI-compatible API.
 
 ## Файлы
 
@@ -64,12 +62,12 @@ id,review
 ## Установка
 
 ```bash
-pip install requests python-dotenv
+pip install requests dotenv
 ```
 
 ## .env
 
-Создай рядом с `script.py` файл `.env`:
+Создайте рядом с `script.py` файл `.env`:
 
 ```env
 API_KEY=your_groq_api_key
